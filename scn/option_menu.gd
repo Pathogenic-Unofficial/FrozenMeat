@@ -2,6 +2,7 @@ extends "res://scn/ui/options_menu.gd"
 
 static var settingsManager = preload("res://mods-unpacked/FallingShrimp-FrozenMeat/scn/setting_manager.gd")
 
+var Constants = preload("res://mods-unpacked/FallingShrimp-FrozenMeat/constants.gd")
 var buttonParent: Node
 var btnTemplate: PButton
 
@@ -23,8 +24,10 @@ func addSetting(sn: StringName, menu: Control):
 	menu.name = "modbutton_%s" % sn
 	tab_content.add_child(menu)
 func removeSetting(sn: StringName):
-	var btn = get_node_or_null("ModTab_%s" % sn)
+	var btn = buttonParent.get_node_or_null("ModTab_%s" % sn)
 	if btn is PButton:
 		tab_buttons.erase(btn)
-		get_node("modbutton_%s" % sn).queue_free()
+		tab_content.get_node("modbutton_%s" % sn).queue_free()
 		btn.queue_free()
+	else:
+		ModLoaderLog.error("尝试删除配置页但是没找到ModTab_%s" % sn, Constants.LOG_NAME)
