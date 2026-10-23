@@ -1,10 +1,10 @@
 {
 	"dependencies": [],
-	"description": "Description of your mod...",
+	"description": "这是一个名为「冻肉」的配置API，用于给你的Mod添加自定义设置页面。",
 	"extra": {
 		"godot": {
 			"authors": [
-				"AuthorName"
+				"FallingShrimp"
 			],
 			"compatible_game_version": [
 				"0.0.1"
@@ -23,6 +23,6 @@
 	},
 	"name": "FrozenMeat",
 	"namespace": "FallingShrimp",
-	"version_number": "0.0.1",
-	"website_url": "https://github.com/exampleauthor/examplemod"
+	"version_number": "1.0.0",
+	"website_url": "https://github.com/Pathogenic-Unofficial/FrozenMeat"
 }
