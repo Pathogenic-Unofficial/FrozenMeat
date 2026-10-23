@@ -1,6 +1,6 @@
 {
 	"dependencies": [],
-	"description": "这是一个名为「冻肉」的配置API，用于给你的Mod添加自定义设置页面。",
+	"description": "这是一个名为「冻肉」的配置API，用于给你的Mod添加自定义设置页面。\n从/root/ModLoader/FallingShrimp-FrozenMeat/MGR可以获得单例的设置页面管理器，注意这个类是单例的，不要去new。\nMGR.addSetting(\"setting_name\",PackedScene)，第一个参数是翻译键，第二个参数可以填一个自定义场景，你的设置页面的具体内容和自定义UIUX。",
 	"extra": {
 		"godot": {
 			"authors": [
